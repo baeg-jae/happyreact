@@ -14,6 +14,12 @@ const Main = () => {
             <NavLink to={'/csspra1'}>
                 <h3>css display의 속성</h3>
             </NavLink>
+            <NavLink to={'/csspra2'}>
+                <h3>css display의 속성2</h3>
+            </NavLink>
+            <NavLink to={'/addUser'}>
+                <h3>유저 등록</h3>
+            </NavLink>
         </StWrapFlex>
     );
 };
@@ -21,7 +27,8 @@ const Main = () => {
 export default Main;
 
 const StWrapFlex = styled.div`
-    ${flex({ direction: 'column' })}
+    ${flex({ direction: 'column', align: 'flex-start' })}
     width: 100vw;
     height: 100%;
+    margin-left: 10%;
 `;
