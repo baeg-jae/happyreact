@@ -1,23 +1,30 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from '@emotion/styled';
-import { __getUser } from 'redux/modules/user';
+import { __deleteNumber, __getNumber } from 'redux/modules/number';
 
-const AddGetUser = () => {
+const GetNumber = () => {
     const dispatch = useDispatch();
-    const { useInfo } = useSelector((state) => state.userReducer);
+    const { useNumber } = useSelector((state) => state.numberReducer);
     // console.log(useInfo);
     useEffect(() => {
-        dispatch(__getUser());
+        dispatch(__getNumber());
     }, [dispatch]);
+
+    const onDeleteHandler = (payload) => {
+        dispatch(__deleteNumber(payload));
+    };
     return (
         <StWrap>
-            {useInfo?.map((v, i) => {
+            {useNumber?.map((v, i) => {
                 return (
                     <StBox key={i}>
-                        <div>{v.name}</div>
-                        <div>{v.age}</div>
-                        <div>{v.nickname}</div>
+                        <div>성별 : {v.gender}</div>
+                        <div>이름 : {v.name}</div>
+                        <div>번호 : {v.number}</div>
+                        <div>별명 : {v.nickname}</div>
+                        <StButton onClick={() => onDeleteHandler()}>삭제</StButton>
+                        <StButton onClick={() => onDeleteHandler()}>수정</StButton>
                     </StBox>
                 );
             })}
@@ -25,7 +32,7 @@ const AddGetUser = () => {
     );
 };
 
-export default AddGetUser;
+export default GetNumber;
 
 const StWrap = styled.div`
     display: flex;
@@ -34,7 +41,7 @@ const StWrap = styled.div`
     height: 100%;
     width: 100%;
 `;
-const StBox = styled.form`
+const StBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,4 +56,9 @@ const StBox = styled.form`
         justify-content: space-between;
         margin: 0.5em;
     }
+`;
+const StButton = styled.button`
+    width: 90%;
+    margin: 0.5em;
+    background-color: cyan;
 `;

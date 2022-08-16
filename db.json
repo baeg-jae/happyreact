@@ -5,6 +5,26 @@
             "name": "baek",
             "age": 20,
             "nickname": "100jaenim"
+        },
+        {
+            "name": "캐나다감자",
+            "age": "11",
+            "nickname": "캐감",
+            "id": 1
+        },
+        {
+            "name": "캐나다감자",
+            "age": "11",
+            "nickname": "캐감",
+            "id": 2
+        }
+    ],
+    "detail": [
+        {
+            "id": 0,
+            "name": "백재",
+            "number": "01012345678",
+            "nickname": "곤쥬감자"
         }
     ]
 }

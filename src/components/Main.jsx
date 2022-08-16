@@ -5,10 +5,10 @@ import flex from 'components/flex';
 const Main = () => {
     return (
         <StWrapFlex>
-            <NavLink to={'/phoneNumber'}>
+            <NavLink to={'/phonenumber'}>
                 <h3>연락처 등록</h3>
             </NavLink>
-            <NavLink to={'/mediaQuery'}>
+            <NavLink to={'/mediaquery'}>
                 <h3>css반응형</h3>
             </NavLink>
             <NavLink to={'/csspra1'}>

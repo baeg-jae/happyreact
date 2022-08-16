@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import AddUser from 'components/AddUser';
+import AddUser from 'components/UserAge/AddUser';
 import flex from 'components/flex';
-import AddGetUser from 'components/AddGetUser';
+import GetUser from 'components/UserAge/GetUser';
 
 const Home = () => {
     return (
         <StWrapFlex>
             <AddUser />
-            <AddGetUser />
+            <GetUser />
         </StWrapFlex>
     );
 };

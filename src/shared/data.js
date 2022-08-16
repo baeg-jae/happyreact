@@ -1,0 +1,3 @@
+export const ADDUSERNICKNAME_MAX_LENGTH = 10;
+export const ADDUSERNAME_MAX_LENGTH = 5;
+export const ADDUSERAGE_LENGTH = 11;
