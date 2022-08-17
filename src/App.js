@@ -9,6 +9,7 @@ const MediaQuery = loadable(() => import('pages/MediaQuery'));
 const CssPra1 = loadable(() => import('pages/CssPra1'));
 const CssPra2 = loadable(() => import('pages/CssPra2'));
 const AddUser = loadable(() => import('pages/AddUser'));
+const Animation = loadable(() => import('pages/Animation'));
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/csspra1" element={<CssPra1 />} />
                 <Route path="/csspra2" element={<CssPra2 />} />
                 <Route path="/adduser" element={<AddUser />} />
+                <Route path="/animation" element={<Animation />} />
             </Routes>
         </>
     );

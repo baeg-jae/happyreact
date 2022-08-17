@@ -1,14 +1,15 @@
 import apis from 'shared/main';
 
+//액션타입 - 리듀서가 뭐할지 정하는애
 const GET_USER = 'user/GET_USER';
-const ADD_USER = 'user/ADD_USER';
-const UPDATE_USER = 'user/UPDATE_USER';
-const DELETE_USER = 'user/DELETE_USER';
 
+const ADD_USER = 'user/ADD_USER';
+
+//액션함수 - 리듀서에 뭐할지 알려주는애
 const getUser = (payload) => ({ type: GET_USER, payload });
 const addUser = (payload) => ({ type: ADD_USER, payload });
-const updateUser = (payload) => ({ type: UPDATE_USER, payload });
-const deleteUser = (payload) => ({ type: DELETE_USER, payload });
+
+//기본값 - 통 - store
 const initialState = {
     useInfo: [],
 };
@@ -20,32 +21,11 @@ export const __getUser = () => async (dispatch) => {
 
 export const __addUser = (payload) => async (dispatch) => {
     const data = await apis.addUser({
-        gender: payload.gender,
         name: payload.name,
-        number: payload.age,
+        age: payload.age,
         nickname: payload.nickname,
     });
     dispatch(addUser(data.data));
-};
-
-export const __updateUser = (payload) => async (dispatch) => {
-    const data = await apis.updateUser({
-        gender: payload.gender,
-        name: payload.name,
-        number: payload.age,
-        nickname: payload.nickname,
-    });
-    dispatch(updateUser(data.data));
-};
-
-export const __deleteUser = (payload) => async (dispatch) => {
-    const data = await apis.deleteUser({
-        gender: payload.gender,
-        name: payload.name,
-        number: payload.age,
-        nickname: payload.nickname,
-    });
-    dispatch(deleteUser(data.data));
 };
 
 export default function userReducer(state = initialState, { payload, type }) {
@@ -54,9 +34,8 @@ export default function userReducer(state = initialState, { payload, type }) {
         case GET_USER:
             return { ...state, useInfo: [...payload] };
         case ADD_USER:
-            return { ...state, useInfo: [...payload] };
-        case UPDATE_USER:
-            return {};
+            return { ...state, useInfo: [...state.useInfo, payload] };
+
         default:
             return state;
     }

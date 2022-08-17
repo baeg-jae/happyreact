@@ -1,30 +1,39 @@
 {
-    "info": [
-        {
-            "id": 0,
-            "name": "baek",
-            "age": 20,
-            "nickname": "100jaenim"
-        },
-        {
-            "name": "캐나다감자",
-            "age": "11",
-            "nickname": "캐감",
-            "id": 1
-        },
-        {
-            "name": "캐나다감자",
-            "age": "11",
-            "nickname": "캐감",
-            "id": 2
-        }
-    ],
-    "detail": [
-        {
-            "id": 0,
-            "name": "백재",
-            "number": "01012345678",
-            "nickname": "곤쥬감자"
-        }
-    ]
+  "info": [
+    {
+      "id": 0,
+      "name": "baek",
+      "age": 20,
+      "nickname": "100jaenim"
+    },
+    {
+      "name": "캐나다감자",
+      "age": "11",
+      "nickname": "캐감",
+      "id": 1
+    },
+    {
+      "name": "캐나다감자",
+      "age": "11",
+      "nickname": "캐감",
+      "id": 2
+    }
+  ],
+  "number": [
+    {
+      "name": "백재",
+      "number": "01012345678",
+      "nickname": "곤쥬감자",
+      "id": 0
+    },
+    {
+      "gender": "남자",
+      "name": "킹준호와아",
+      "nickname": "aaaa",
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
 }

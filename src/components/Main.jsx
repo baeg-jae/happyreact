@@ -20,6 +20,9 @@ const Main = () => {
             <NavLink to={'/addUser'}>
                 <h3>유저 등록</h3>
             </NavLink>
+            <NavLink to={'/animation'}>
+                <h3>애니메이션</h3>
+            </NavLink>
         </StWrapFlex>
     );
 };

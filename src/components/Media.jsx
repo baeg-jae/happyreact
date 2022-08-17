@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import flex from 'components/flex';
 
 const Media = () => {
     return <StTomato></StTomato>;
